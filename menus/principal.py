@@ -8,11 +8,12 @@ def menuPrincipal() -> int:
         espaco()
         print(f' 0 - {colorir('vermelho', 'Sair')}')
         print(f' 1 - {colorir('roxo', 'Calculadora')}')
+        print(f' 2 - {colorir('roxo', 'TODO')}')
         
         espaco()
         try:
             escolha = int(input('Escolha: '))
-            if escolha > 1 or escolha < 0:
+            if escolha > 2 or escolha < 0:
                 raise TypeError
         except ValueError:
             erro('Escreva um Número')

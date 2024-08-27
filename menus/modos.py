@@ -13,11 +13,12 @@ def menuModos() -> int:
         print(f' 3 - {colorir('roxo', 'Roblox')}')
         print(f' 4 - {colorir('roxo', 'CAD')}')
         print(f' 5 - {colorir('roxo', 'Entretenimento')}')
+        print(f' 6 - {colorir('roxo', 'Nenhum')}')
         espaco()
         
         try:
             escolha: int = int(input('Escolha: '))
-            if escolha > 5 or escolha < 0:
+            if escolha > 6 or escolha < 0:
                 raise TypeError
         except ValueError:
             erro('Escreva um Número')
