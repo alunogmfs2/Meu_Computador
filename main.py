@@ -23,15 +23,18 @@ else:
 
 while True:
     if escolhaMain == 1:
-        escolhaCalc: int = menuCalculadora()
-        if escolhaCalc == 1:
-            somar()
-        elif escolhaCalc == 2:
-            subtrair()
-        elif escolhaCalc == 3:
-            multiplicar()
-        elif escolhaCalc == 4:
-            dividir()
+        while True:
+            escolhaCalc: int = menuCalculadora()
+            if escolhaCalc == 1:
+                somar()
+            elif escolhaCalc == 2:
+                subtrair()
+            elif escolhaCalc == 3:
+                multiplicar()
+            elif escolhaCalc == 4:
+                dividir()
+            else:
+                break
     elif escolhaMain == 0:
         exit()
     escolhaMain = menuPrincipal()
