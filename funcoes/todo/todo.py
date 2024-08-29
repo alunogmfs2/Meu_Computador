@@ -55,7 +55,7 @@ def adicionarTodo() -> None:
     espaco()
     pausar_terminal()
 
-def listarTodos() -> None:0
+def listarTodos() -> None:
     limpar_terminal()
     try:
         todos = lerArquivo()
@@ -117,8 +117,10 @@ def atualizarTodo() -> None:
         espaco()
         for todo in todos:
             if todo['id'] == tarefa:
+                print(f'TODO anterior: {colorir('roxo', todo['todo'])}')
                 novoTodo = input('Como você deseja chamar o TODO: ')
                 todo['todo'] = novoTodo
+                todo['data_atualizacao'] = datetime.datetime.now()
                 with open('E:\\Programacao\\Projetos\\Meu_Computador\\arquivos\\todos.json', 'w') as f:
                     t = json.dumps(todos)
                     f.write(t)
