@@ -4,7 +4,7 @@ import pyautogui as pag
 
 pag.PAUSE = 0.5
 
-modos = {
+modos = { # Fazendo a lista de modos possiveis
         1: {
                 'urls': ['https://www.youtube.com/',
                          'https://github.com/alunogmfs2',

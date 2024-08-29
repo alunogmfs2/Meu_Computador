@@ -23,7 +23,7 @@ def colorir(cor: str,
           special: str | None = None
           ) -> str:
     
-    cores = {
+    cores = { # Tradutor os Códigos das Cores
         'vermelho': '31',
         'verde': '32',
         'amarelo': '33',
@@ -33,12 +33,12 @@ def colorir(cor: str,
         'cinza': '37'
     }
     
-    speciais = {
+    speciais = { # Tradutor os Códigos dos Speciais
         'negrito': '1',
         'sublinhado': '4',
     }
     
-    cores_de_fundo = {
+    cores_de_fundo = {  # Tradutor os Códigos das Cores de Fundo
         'preto': '40',
         'vermelho': '41',
         'verde': '42',
@@ -49,7 +49,9 @@ def colorir(cor: str,
         'cinza': '47'
     }
     
-    if cor_de_fundo and special:
+    # Testando todos os Casos
+    
+    if cor_de_fundo and special: 
         if special in speciais and cor_de_fundo in cores_de_fundo:
             return f'\033[{speciais[special]};{cores[cor]};{cores_de_fundo[cor_de_fundo]}m{texto}\033[m'
     
