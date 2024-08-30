@@ -59,7 +59,7 @@ def abrirSites(escolha: int) -> None:
 def abrirApps(escolha: int) -> None:
     for app in modos[escolha]['apps']:
         pag.press('winleft')
-        pag.write(app)
+        pag.typewrite(app)
         pag.press('enter')
 
 def abrirTudo(escolha: int) -> None:

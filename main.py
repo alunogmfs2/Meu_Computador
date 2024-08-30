@@ -4,7 +4,7 @@ from menus.principal import menuPrincipal
 from menus.calculadora import menuCalculadora
 from menus.todo import menuTodo
 from menus.comandos import menuComandos
-from Projetos.Meu_Computador.menus.linguagem import menuLinguagem
+from menus.linguagem import menuLinguagem
 from funcoes.calculadora.calculos import *
 from funcoes.modos.modos import *
 from funcoes.todo.todo import *
