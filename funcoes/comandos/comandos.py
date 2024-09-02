@@ -183,9 +183,21 @@ def listarComandos(tipo: str) -> None:
         erro('Escreva algum Comando primeiro')
         return
     
+    lim = 10
+    
+    cont = 0
+    
     for cmd in comandos:
         print(f'{colorir('azul', cmd['id'])} - {colorir('rosa', cmd['comando'])}:\n{colorir('roxo', cmd['descricao'])}')
         espaco()
+        
+        if cont == lim:
+            cont = 0
+            pausar_terminal()
+            limpar_terminal()
+            continue
+        
+        cont += 1
     
     pausar_terminal()
 
