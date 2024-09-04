@@ -247,8 +247,6 @@ while True:
                         break
             else:
                 break
-    elif escolhaMain == 4:
-        fazerBackup()
     elif escolhaMain == 0:
         exit()
     escolhaMain = menuPrincipal()
