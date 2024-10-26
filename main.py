@@ -9,9 +9,7 @@ from funcoes.calculadora.calculos import *
 from funcoes.modos.modos import *
 from funcoes.todo.todo import *
 from funcoes.comandos.comandos import *
-from funcoes.backup.backup import *
 
-escolhaMain: int = -1
 escolhaModos: int = menuModos()
 
 if escolhaModos == 1:
@@ -30,6 +28,7 @@ else:
     exit()
 
 while True:
+    escolhaMain = menuPrincipal()
     if escolhaMain == 1:
         while True:
             escolhaCalc: int = menuCalculadora()
@@ -247,6 +246,5 @@ while True:
                         break
             else:
                 break
-    elif escolhaMain == 0:
+    else:
         exit()
-    escolhaMain = menuPrincipal()

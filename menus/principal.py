@@ -10,12 +10,12 @@ def menuPrincipal() -> int:
         print(f' 1 - {colorir('roxo', 'Calculadora')}')
         print(f' 2 - {colorir('roxo', 'TODO')}')
         print(f' 3 - {colorir('roxo', 'Comandos')}')
-        print(f' 4 - {colorir('roxo', 'Backup')}')
+
         
         espaco()
         try:
             escolha = int(input('Escolha: '))
-            if escolha > 4 or escolha < 0:
+            if escolha > 3 or escolha < 0:
                 raise TypeError
         except ValueError:
             erro('Escreva um Número')
